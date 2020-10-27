@@ -1,0 +1,46 @@
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(4, 0, 27);
+    position: relative;
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 30px;
+    top: 245px;
+}
+
+.cardDiv {
+    width: 340px;
+    height: 260px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    margin: 15px 15px 0px 0px
+}
+.cardDiv img:hover{
+    transform: scale(1.1);
+}
+.cardDiv img {
+    max-height: 100%;
+}
+
+.currentScore {
+    position: fixed;
+    left: 30px;
+    bottom: 10px;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Henny Penny', cursive;
+}
+
+.highestScore {
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    font-size: 5vw;
+    color: white;
+    font-family: 'Henny Penny', cursive;
+}
