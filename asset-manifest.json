@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2f045552.chunk.css",
+    "main.js": "/static/js/main.0c4f3edc.chunk.js",
+    "main.js.map": "/static/js/main.0c4f3edc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.59ed088a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.59ed088a.js.map",
+    "static/js/2.6b107e28.chunk.js": "/static/js/2.6b107e28.chunk.js",
+    "static/js/2.6b107e28.chunk.js.map": "/static/js/2.6b107e28.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.2f045552.chunk.css.map": "/static/css/main.2f045552.chunk.css.map",
+    "static/js/2.6b107e28.chunk.js.LICENSE.txt": "/static/js/2.6b107e28.chunk.js.LICENSE.txt",
+    "static/media/Helltaker_Banner.ed6bbf3e.webp": "/static/media/Helltaker_Banner.ed6bbf3e.webp",
+    "static/media/azazel.a663935d.webp": "/static/media/azazel.a663935d.webp",
+    "static/media/beelzebub.1111ea40.webp": "/static/media/beelzebub.1111ea40.webp",
+    "static/media/cerberus.b465d1f3.webp": "/static/media/cerberus.b465d1f3.webp",
+    "static/media/judgement.b58be5a2.webp": "/static/media/judgement.b58be5a2.webp",
+    "static/media/justice.58758ebe.webp": "/static/media/justice.58758ebe.webp",
+    "static/media/lucifer.93c32ee2.webp": "/static/media/lucifer.93c32ee2.webp",
+    "static/media/malina.ca9f2b74.webp": "/static/media/malina.ca9f2b74.webp",
+    "static/media/modeus.ddbb9b4c.webp": "/static/media/modeus.ddbb9b4c.webp",
+    "static/media/pandemonica.7fa4da6e.webp": "/static/media/pandemonica.7fa4da6e.webp",
+    "static/media/theHelltaker.9039b963.webp": "/static/media/theHelltaker.9039b963.webp",
+    "static/media/zdrada.ef77e737.webp": "/static/media/zdrada.ef77e737.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.59ed088a.js",
+    "static/js/2.6b107e28.chunk.js",
+    "static/css/main.2f045552.chunk.css",
+    "static/js/main.0c4f3edc.chunk.js"
+  ]
+}
