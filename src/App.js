@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
 import './styles/app.css';
 
@@ -12,6 +12,7 @@ import modeus from './assets/modeus.webp';
 import zdrada from './assets/zdrada.webp';
 import cerberus from './assets/cerberus.webp';
 import pandemonica from './assets/pandemonica.webp';
+import helltaker from './assets/theHelltaker.webp';
 
 function App() {
 
@@ -49,6 +50,9 @@ function App() {
   const [wasDiv10Clicked, setDiv10] = useState(false);
   let div10Order = getRandomInt(100);
 
+  const [wasDiv11Clicked, setDiv11] = useState(false);
+  let div11Order = getRandomInt(100);
+
   const [currentScore, setCurrentScore] = useState(0);
 
   const [highestScore, setHighestScore] = useState(0);
@@ -64,12 +68,14 @@ function App() {
     div8Order = getRandomInt(100);
     div9Order = getRandomInt(100);
     div10Order = getRandomInt(100);
+    div11Order = getRandomInt(100);
   }, [
     wasDiv1Clicked, wasDiv2Clicked,
     wasDiv3Clicked, wasDiv4Clicked,
     wasDiv5Clicked, wasDiv6Clicked,
     wasDiv7Clicked, wasDiv8Clicked, 
-    wasDiv9Clicked, wasDiv10Clicked
+    wasDiv9Clicked, wasDiv10Clicked,
+    wasDiv11Clicked
   ])
 
   function resetValues(){
@@ -83,6 +89,7 @@ function App() {
     setDiv8(false);
     setDiv9(false);
     setDiv10(false);
+    setDiv11(false);
     setCurrentScore(0);
   }
 
@@ -206,58 +213,83 @@ function App() {
     }
   }
 
-  return (
-    <div className="cardsContainer">
-      <div className='cardDiv' id='card1' style={{
-        order: div1Order
-      }} onClick={checkDiv1}>
-        <img src={lucifer} alt='Lucifer'/>
-      </div>
-      <div className='cardDiv' id='card2' style={{
-        order: div2Order
-      }} onClick={checkDiv2}>
-        <img src={azazel} alt='Azazel'/>
-      </div>
-      <div className='cardDiv' id='card3' style={{
-        order: div3Order
-      }} onClick={checkDiv3}>
-        <img src={beelzebub} alt='Beelzebub'/>
-      </div>
-      <div className='cardDiv' id='card4' style={{
-        order: div4Order
-      }} onClick={checkDiv4}>
-        <img src={justice} alt='Justice'/>
-      </div>
-      <div className='cardDiv' id='card5' style={{
-        order: div5Order
-      }} onClick={checkDiv5}>
-        <img src={judgement} alt='Judgement'/>
-      </div>
-      <div className='cardDiv' id='card6' style={{
-        order: div6Order
-      }}  onClick={checkDiv6}>
-        <img src={malina} alt='Malina'/>
-      </div>
-      <div className='cardDiv' id='card7' style={{
-        order: div7Order
-      }} onClick={checkDiv7}>
-        <img src={modeus} alt='Modeus'/>
-      </div>
-      <div className='cardDiv' id='card8' style={{
-        order: div8Order
-      }} onClick={checkDiv8}>
-        <img src={zdrada} alt='Zdrada'/>
-      </div>
-      <div className='cardDiv' id='card9' style={{
-        order: div9Order
-      }} onClick={checkDiv9}>
-        <img src={cerberus} alt='Cerberus'/>
-      </div>
-      <div className='cardDiv' id='card10' style={{
-        order: div10Order
-      }} onClick={checkDiv10}>
-        <img src={pandemonica} alt='Pandemonica'/>
-      </div>
+  function checkDiv11(){
+    if(wasDiv11Clicked){
+      resetValues();
+    } else {
+      setDiv11(true);
+      setCurrentScore(currentScore+1);
+      if(currentScore > highestScore){
+        setHighestScore(currentScore);
+      }
+    }
+  }
+
+  return(
+    <div>
+        <div className='cardsContainer'>
+            <div className='cardDiv' id='card1' style={{
+                order: div1Order
+            }} onClick={checkDiv1}>
+                <img src={lucifer} alt='Lucifer'/>
+            </div>
+            <div className='cardDiv' id='card2' style={{
+                order: div2Order
+            }} onClick={checkDiv2}>
+                <img src={azazel} alt='Azazel'/>
+            </div>
+            <div className='cardDiv' id='card3' style={{
+                order: div3Order
+            }} onClick={checkDiv3}>
+                <img src={beelzebub} alt='Beelzebub'/>
+            </div>
+            <div className='cardDiv' id='card4' style={{
+                order: div4Order
+            }} onClick={checkDiv4}>
+                <img src={justice} alt='Justice'/>
+            </div>
+            <div className='cardDiv' id='card5' style={{
+                order: div5Order
+            }} onClick={checkDiv5}>
+                <img src={judgement} alt='Judgement'/>
+            </div>
+            <div className='cardDiv' id='card6' style={{
+                order: div6Order
+            }} onClick={checkDiv6}>
+                <img src={malina} alt='Malina'/>
+            </div>
+            <div className='cardDiv' id='card7' style={{
+                order: div7Order
+            }} onClick={checkDiv7}>
+                <img src={modeus} alt='Modeus'/>
+            </div>
+            <div className='cardDiv' id='card8' style={{
+                order: div8Order
+            }} onClick={checkDiv8}>
+                <img src={zdrada} alt='Zdrada'/>
+            </div>
+            <div className='cardDiv' id='card9' style={{
+                order: div9Order
+            }} onClick={checkDiv9}>
+                <img src={cerberus} alt='Cerberus'/>
+            </div>
+            <div className='cardDiv' id='card10' style={{
+                order: div10Order
+            }} onClick={checkDiv10}>
+                <img src={pandemonica} alt='Pandemonica'/>
+            </div>
+            <div className='cardDiv' id='card11' style={{
+                order: div11Order
+            }} onClick={checkDiv11}>
+                <img src={helltaker} alt='Helltaker'/>
+            </div>
+        </div>
+        <div className='currentScore'>
+            {currentScore}
+        </div>
+        <div className='highestScore'>
+            {highestScore}
+        </div>
     </div>
   );
 }
